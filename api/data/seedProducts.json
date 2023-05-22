@@ -1,0 +1,323 @@
+{
+  "discs": [
+    {
+      "id": "6468da6bfdcf58dcc54cf346",
+      "type": "dvd",
+      "name": "glistening DISC",
+      "price": 39941,
+      "size": 3
+    },
+    {
+      "id": "6468da6be26912fba2828f62",
+      "type": "dvd",
+      "name": "psychedelic DISC",
+      "price": 37291,
+      "size": 12
+    },
+    {
+      "id": "6468da6bd549166f460a0a74",
+      "type": "dvd",
+      "name": "industrious DISC",
+      "price": 48104,
+      "size": 21
+    },
+    {
+      "id": "6468da6b3fc223ce2a469c03",
+      "type": "dvd",
+      "name": "merciful DISC",
+      "price": 13478,
+      "size": 22
+    },
+    {
+      "id": "6468da6b8918645178930c68",
+      "type": "dvd",
+      "name": "merciful DISC",
+      "price": 29764,
+      "size": 23
+    },
+    {
+      "id": "6468da6b5fba3fa6c18879ef",
+      "type": "dvd",
+      "name": "heady DISC",
+      "price": 37549,
+      "size": 6
+    },
+    {
+      "id": "6468da6ba80a5a14139c29e4",
+      "type": "dvd",
+      "name": "merciful DISC",
+      "price": 45251,
+      "size": 3
+    },
+    {
+      "id": "6468da6b673cd83ff34f9050",
+      "type": "dvd",
+      "name": "finicky DISC",
+      "price": 20952,
+      "size": 19
+    },
+    {
+      "id": "6468da6b90f1452639b274dd",
+      "type": "dvd",
+      "name": "psychedelic DISC",
+      "price": 35502,
+      "size": 26
+    },
+    {
+      "id": "6468da6bccee942f80b69299",
+      "type": "dvd",
+      "name": "heady DISC",
+      "price": 28901,
+      "size": 9
+    },
+    {
+      "id": "6468da6b01dbe3913c8891a9",
+      "type": "dvd",
+      "name": "psychedelic DISC",
+      "price": 7702,
+      "size": 20
+    },
+    {
+      "id": "6468da6b2513aeebaf1fa6e5",
+      "type": "dvd",
+      "name": "merciful DISC",
+      "price": 22976,
+      "size": 5
+    },
+    {
+      "id": "6468da6bf85afafddc9ca06c",
+      "type": "dvd",
+      "name": "merciful DISC",
+      "price": 45652,
+      "size": 30
+    },
+    {
+      "id": "6468da6b0f9d1612c18a6e21",
+      "type": "dvd",
+      "name": "heady DISC",
+      "price": 34094,
+      "size": 19
+    },
+    {
+      "id": "6468da6beea0c955aaa84753",
+      "type": "dvd",
+      "name": "heady DISC",
+      "price": 47463,
+      "size": 1
+    }
+  ],
+  "furniture": [
+    {
+      "id": "6468d4f4bf0142910297799b",
+      "name": "Cabinet",
+      "type": "furniture",
+      "price": 28032,
+      "dimensions": "116x80x62"
+    },
+    {
+      "id": "6468d4f4b6bf3bd32c1357ee",
+      "name": "Table",
+      "type": "furniture",
+      "price": 22450,
+      "dimensions": "137x117x89"
+    },
+    {
+      "id": "6468d4f428ea01c7d779fdc1",
+      "name": "Table",
+      "type": "furniture",
+      "price": 31725,
+      "dimensions": "96x137x101"
+    },
+    {
+      "id": "6468d4f44417b4cd9e7ba126",
+      "name": "Sofa",
+      "type": "furniture",
+      "price": 10675,
+      "dimensions": "108x115x81"
+    },
+    {
+      "id": "6468d4f462696b67fc1bf5d4",
+      "name": "Desk",
+      "type": "furniture",
+      "price": 34797,
+      "dimensions": "60x99x88"
+    },
+    {
+      "id": "6468d4f4245abb6bed79129c",
+      "name": "Bed",
+      "type": "furniture",
+      "price": 8024,
+      "dimensions": "137x88x93"
+    },
+    {
+      "id": "6468d4f4284858d0cefd3539",
+      "name": "Table",
+      "type": "furniture",
+      "price": 46877,
+      "dimensions": "145x136x140"
+    },
+    {
+      "id": "6468d4f4a4931b336ae17231",
+      "name": "Cabinet",
+      "type": "furniture",
+      "price": 28178,
+      "dimensions": "56x60x119"
+    },
+    {
+      "id": "6468d4f497d6f505b14b6aa3",
+      "name": "Dresser",
+      "type": "furniture",
+      "price": 29155,
+      "dimensions": "122x94x115"
+    },
+    {
+      "id": "6468d4f4081f699583d328c2",
+      "name": "Sink",
+      "type": "furniture",
+      "price": 45048,
+      "dimensions": "112x113x100"
+    },
+    {
+      "id": "6468d4f43664b96285d617f6",
+      "name": "Table",
+      "type": "furniture",
+      "price": 41600,
+      "dimensions": "85x116x94"
+    },
+    {
+      "id": "6468d4f4f1f908a9bafb27be",
+      "name": "Chair",
+      "type": "furniture",
+      "price": 47100,
+      "dimensions": "128x149x62"
+    },
+    {
+      "id": "6468d4f46920af52258caced",
+      "name": "Chair",
+      "type": "furniture",
+      "price": 48912,
+      "dimensions": "92x82x136"
+    },
+    {
+      "id": "6468d4f45f846ad9fce3338e",
+      "name": "Sink",
+      "type": "furniture",
+      "price": 18929,
+      "dimensions": "113x93x143"
+    },
+    {
+      "id": "6468d4f49fa0e0c465040bdf",
+      "name": "Table",
+      "type": "furniture",
+      "price": 44459,
+      "dimensions": "70x106x91"
+    }
+  ],
+  "books": [
+    {
+      "id": "6468d3ad3ac17d0c5fa2f311",
+      "name": "Ficciones",
+      "type": "book",
+      "price": 2000,
+      "weight": 3
+    },
+    {
+      "id": "6468d3adb0ed149b346617f4",
+      "name": "The Possessed",
+      "type": "book",
+      "price": 2588,
+      "weight": 3
+    },
+    {
+      "id": "6468d3ad31bb37fa488159b7",
+      "name": "One Thousand and One Nights",
+      "type": "book",
+      "price": 2684,
+      "weight": 1
+    },
+    {
+      "id": "6468d3adcb4f488e29195682",
+      "name": "The Decameron",
+      "type": "book",
+      "price": 2613,
+      "weight": 3
+    },
+    {
+      "id": "6468d3adf7e137f5661ddbc7",
+      "name": "Don Quijote De La Mancha",
+      "type": "book",
+      "price": 1815,
+      "weight": 3
+    },
+    {
+      "id": "6468d3adf0d1b02ea4981e22",
+      "name": "Wuthering Heights",
+      "type": "book",
+      "price": 662,
+      "weight": 2
+    },
+    {
+      "id": "6468d3ad29141bd08ab27813",
+      "name": "Great Expectations",
+      "type": "book",
+      "price": 2655,
+      "weight": 3
+    },
+    {
+      "id": "6468d3ada5f64de1e9dcbf13",
+      "name": "The Possessed",
+      "type": "book",
+      "price": 2443,
+      "weight": 1
+    },
+    {
+      "id": "6468d3ada244f5be56928d07",
+      "name": "The Divine Comedy",
+      "type": "book",
+      "price": 2103,
+      "weight": 3
+    },
+    {
+      "id": "6468d3ad60f583dda9b81f99",
+      "name": "Fairy tales",
+      "type": "book",
+      "price": 2827,
+      "weight": 1
+    },
+    {
+      "id": "6468d3ad4d7b78305ab76dd0",
+      "name": "Things Fall Apart",
+      "type": "book",
+      "price": 1343,
+      "weight": 1
+    },
+    {
+      "id": "6468d3ad228c28f2cd7070e4",
+      "name": "Things Fall Apart",
+      "type": "book",
+      "price": 976,
+      "weight": 3
+    },
+    {
+      "id": "6468d3ad6b434c092a07dcd0",
+      "name": "Journey to the End of the Night",
+      "type": "book",
+      "price": 2568,
+      "weight": 2
+    },
+    {
+      "id": "6468d3ad9ac7d528030c33f4",
+      "name": "Pride and Prejudice",
+      "type": "book",
+      "price": 2269,
+      "weight": 2
+    },
+    {
+      "id": "6468d3adb1019977704c1607",
+      "name": "Don Quijote De La Mancha",
+      "type": "book",
+      "price": 1697,
+      "weight": 3
+    }
+  ]
+}
