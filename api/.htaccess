@@ -1,7 +1,7 @@
 Options +FollowSymLinks -MultiViews
 
 RewriteEngine On
-RewriteBase /junior-assignment/api/
+RewriteBase /scandiweb-test/api/
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

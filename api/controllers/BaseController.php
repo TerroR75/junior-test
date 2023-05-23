@@ -1,5 +1,7 @@
 <?php
-require_once "api/services/database.php";
+namespace Api\Controllers;
+
+use Database;
 
 class BaseController
 {

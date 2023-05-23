@@ -1,10 +1,11 @@
 <?php
+namespace Api\Controllers;
 
-
+use Database;
 
 class ProductsController
 {
-    public $conn =  null;
+    public $conn = null;
 
     public function __construct()
     {
@@ -28,10 +29,11 @@ class ProductsController
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json"));
 
+
             $responseData = json_decode(curl_exec($ch), true);
 
-            echo "<pre>";
-            var_dump($responseData);
+            header('Content-Type: application/json');
+            echo json_encode($responseData);
             exit;
         } catch (\Exception $e) {
             var_dump($e->getMessage());

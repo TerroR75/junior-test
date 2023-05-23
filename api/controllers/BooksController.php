@@ -1,6 +1,5 @@
 <?php
-require_once "api/services/database.php";
-require_once "api/controllers/BaseController.php";
+use Api\Controllers\BaseController;
 
 class BooksController extends BaseController
 {

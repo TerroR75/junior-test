@@ -1,13 +1,5 @@
 <?php
 
-require_once "api/controllers/BooksController.php";
-require_once "api/models/Book.php";
-
-require_once "api/controllers/FurnitureController.php";
-require_once "api/models/Furniture.php";
-
-require_once "api/controllers/DVDDiscsController.php";
-require_once "api/models/DVDDisc.php";
 
 class DataSeeder
 {
