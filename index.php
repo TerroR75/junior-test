@@ -1,4 +1,4 @@
 <?php
-
+require_once "./api/App/bootstrapping.php";
 // require_once "api/data/DataSeeder.php";
-// (new DataSeeder)->seedData("api/data/seedProducts.json");
+(new DataSeeder)->seedData("api/App/Data/seedProducts.json");

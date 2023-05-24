@@ -1,5 +1,4 @@
 <?php
-require_once "api/models/Product.php";
 
 class DVDDisc extends Product
 {

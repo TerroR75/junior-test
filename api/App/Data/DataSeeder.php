@@ -25,7 +25,7 @@ class DataSeeder
         if (isset($data["books"])) {
             foreach ($data["books"] as $book) {
                 $newBook = new Book($book["id"], $book["name"], $book["type"], $book["price"], $book["weight"]);
-                $booksController->createBook($newBook);
+                $booksController->createItems($newBook);
             }
         }
 
@@ -41,7 +41,7 @@ class DataSeeder
         if (isset($data["furniture"])) {
             foreach ($data["furniture"] as $furniture) {
                 $newFurniture = new Furniture($furniture["id"], $furniture["name"], $furniture["type"], $furniture["price"], $furniture["dimensions"]);
-                $furnitureController->createFurniture($newFurniture);
+                $furnitureController->createItems($newFurniture);
             }
         }
 
@@ -57,7 +57,7 @@ class DataSeeder
         if (isset($data["discs"])) {
             foreach ($data["discs"] as $disc) {
                 $newDisc = new DVDDisc($disc["id"], $disc["name"], $disc["type"], $disc["price"], $disc["size"]);
-                $discsController->createDisc($newDisc);
+                $discsController->createItems($newDisc);
             }
         }
 

@@ -1,6 +1,5 @@
 <?php
 
-
 class Furniture extends Product
 {
     public $dimensions;

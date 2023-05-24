@@ -1,3 +1,10 @@
 {
-  "require": {}
+  "autoload": {
+    "classmap": [
+      "App/Models",
+      "App/Controllers",
+      "App/Data",
+      "App/Services"
+    ]
+  }
 }

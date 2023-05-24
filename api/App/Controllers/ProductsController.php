@@ -1,7 +1,7 @@
 <?php
-namespace Api\Controllers;
+// namespace Api\Controllers;
 
-use Database;
+// use Database;
 
 class ProductsController
 {

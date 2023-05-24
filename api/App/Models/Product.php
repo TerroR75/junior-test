@@ -1,7 +1,5 @@
 <?php
 
-
-
 class Product
 {
     public $sku;
