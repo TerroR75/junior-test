@@ -7,7 +7,7 @@ $current_link = $_SERVER["REQUEST_URI"];
 
 // Routes
 $urls = [
-    "/junior-test/api/products" => [ProductsController::class, 'getProducts'],
+    "/junior-test/api/products" => [BaseController::class, 'getAllProducts'],
     "/junior-test/api/books" => [BooksController::class, 'getAllBooks']
 ];
 

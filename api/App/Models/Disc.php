@@ -1,19 +1,19 @@
 <?php
 
-class Book extends Product
+class Disc extends Product
 {
-    public $weight;
+    public $size;
 
-    public function __construct($sku, $name, $type, $price, $weight = 0)
+    public function __construct($sku, $name, $type, $price, $size = 0)
     {
         parent::__construct($sku, $name, $type, $price);
-        $this->weight = $weight;
+        $this->size = $size;
     }
 
     public function addSpecificData($row)
     {
         $details = array();
-        $details["weight"] = $row["weight"];
+        $details["size"] = $row["size"];
         $this->productData['details'] = $details;
     }
 }

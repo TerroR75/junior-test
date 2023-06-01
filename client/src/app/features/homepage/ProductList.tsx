@@ -13,7 +13,7 @@ function ProductList({ products }: Props) {
     <Grid container spacing={4}>
       {products.map((product: Product) => {
         return (
-          <Grid item xs={3} key={product.id}>
+          <Grid item xs={3} key={product.sku}>
             <ProductCard product={product} />
           </Grid>
         );

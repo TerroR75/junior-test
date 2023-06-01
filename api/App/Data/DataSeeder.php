@@ -10,9 +10,9 @@ class DataSeeder
 
     public function seedData($jsonFilePath)
     {
+        $this->seedDiscs($jsonFilePath);
         $this->seedBooks($jsonFilePath);
         $this->seedFurniture($jsonFilePath);
-        $this->seedDiscs($jsonFilePath);
     }
 
     private function seedBooks($jsonFilePath)
@@ -56,7 +56,7 @@ class DataSeeder
 
         if (isset($data["discs"])) {
             foreach ($data["discs"] as $disc) {
-                $newDisc = new DVDDisc($disc["id"], $disc["name"], $disc["type"], $disc["price"], $disc["size"]);
+                $newDisc = new Disc($disc["id"], $disc["name"], $disc["type"], $disc["price"], $disc["size"]);
                 $discsController->createItems($newDisc);
             }
         }

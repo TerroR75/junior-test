@@ -9,7 +9,7 @@ function HomePage() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    agent.Books.list()
+    agent.Products.list()
       .then((products) => setData(products))
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));

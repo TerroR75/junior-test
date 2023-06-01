@@ -18,12 +18,17 @@ const requests = {
   delete: (url: string) => axios.delete(url).then(responseBody),
 };
 
+const Products = {
+  list: () => requests.get("products"),
+};
+
 const Books = {
   list: () => requests.get("books"),
   //   details: (id: number) => requests.get(`products/${id}`),
 };
 
 const agent = {
+  Products,
   Books,
 };
 

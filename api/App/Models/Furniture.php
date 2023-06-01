@@ -4,20 +4,16 @@ class Furniture extends Product
 {
     public $dimensions;
 
-    public function __construct($sku, $name, $type, $price, $dimensions)
+    public function __construct($sku, $name, $type, $price, $dimensions = "")
     {
         parent::__construct($sku, $name, $type, $price);
         $this->dimensions = $dimensions;
     }
 
-    // Getters and setters
-    public function getDimensions()
+    public function addSpecificData($row)
     {
-        return $this->dimensions;
-    }
-
-    public function setDimensions($dimensions)
-    {
-        $this->dimensions = $dimensions;
+        $details = array();
+        $details["dimensions"] = $row["dimensions"];
+        $this->productData['details'] = $details;
     }
 }
