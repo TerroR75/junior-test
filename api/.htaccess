@@ -1,7 +1,12 @@
 Options +FollowSymLinks -MultiViews
 
+Header set Access-Control-Allow-Origin "http://localhost:3000"
+Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header set Access-Control-Allow-Headers "Content-Type"
+
+
 RewriteEngine On
-RewriteBase /scandiweb-test/api/
+RewriteBase /junior-test/api/
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

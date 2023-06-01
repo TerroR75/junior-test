@@ -1,16 +1,14 @@
 <?php
 require_once 'vendor/autoload.php';
 
-use Api\Controllers\ProductsController;
-use Api\Controllers\BooksController;
 
 // Get current URL
 $current_link = $_SERVER["REQUEST_URI"];
 
 // Routes
 $urls = [
-    "/scandiweb-test/api/products" => [ProductsController::class, 'getProducts'],
-    "/scandiweb-test/api/books" => [BooksController::class, 'getAllBooks']
+    "/junior-test/api/products" => [ProductsController::class, 'getProducts'],
+    "/junior-test/api/books" => [BooksController::class, 'getAllBooks']
 ];
 
 // Find a matching route

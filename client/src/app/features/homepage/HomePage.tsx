@@ -1,32 +1,25 @@
 import { CircularProgress } from "@mui/material";
 import { useEffect, useState } from "react";
 import Loading from "../../layout/Loading";
-import axios from "axios";
+import agent from "../../api/axiosAgent";
+import ProductList from "./ProductList";
 
 function HomePage() {
   const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("/user?ID=12345")
-      .then(function (response) {
-        // handle success
-        console.log(response);
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .finally(function () {
-        // always executed
-      });
+    agent.Books.list()
+      .then((products) => setData(products))
+      .catch((error) => console.log(error))
+      .finally(() => setLoading(false));
   }, []);
 
   if (loading) {
     return <Loading message={"Fetching products..."} />;
   }
 
-  return <>Home page</>;
+  return <ProductList products={data} />;
 }
 
 export default HomePage;
