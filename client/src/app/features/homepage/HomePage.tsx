@@ -1,4 +1,3 @@
-import { CircularProgress } from "@mui/material";
 import { useEffect, useState } from "react";
 import Loading from "../../layout/Loading";
 import agent from "../../api/axiosAgent";
@@ -17,6 +16,10 @@ function HomePage() {
 
   if (loading) {
     return <Loading message={"Fetching products..."} />;
+  }
+
+  if (data.length === 0) {
+    return <h3>"No products found."</h3>;
   }
 
   return <ProductList products={data} />;

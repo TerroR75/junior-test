@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import Header from "./Header";
 import { Container, CssBaseline, createTheme } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
 import { Outlet } from "react-router-dom";
+import { ProductsToDeleteProvider } from "../context/ProductsToDeleteContext";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -49,13 +50,15 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <CssBaseline />
-        <Header darkModeChecked={darkMode} checkDarkMode={changeDarkMode} />
-        <Container sx={{ mt: 10 }}>
-          <Outlet />
-        </Container>
-      </div>
+      <ProductsToDeleteProvider>
+        <div className="App">
+          <CssBaseline />
+          <Header darkModeChecked={darkMode} checkDarkMode={changeDarkMode} />
+          <Container sx={{ mt: 10 }}>
+            <Outlet />
+          </Container>
+        </div>
+      </ProductsToDeleteProvider>
     </ThemeProvider>
   );
 }

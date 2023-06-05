@@ -7,7 +7,7 @@ const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 const responseBody = (response: AxiosResponse) => response.data;
 
 axios.interceptors.response.use(async (response) => {
-  await delay(1000);
+  await delay(10);
   return response;
 });
 
@@ -20,6 +20,7 @@ const requests = {
 
 const Products = {
   list: () => requests.get("products"),
+  deleteSelected: () => requests.delete("deleteSelected"),
 };
 
 const Books = {

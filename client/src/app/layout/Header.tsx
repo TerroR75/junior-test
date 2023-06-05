@@ -10,7 +10,9 @@ import {
   Switch,
   Button,
 } from "@mui/material";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { ProductsToDeleteContext } from "../context/ProductsToDeleteContext";
 
 interface Props {
   darkModeChecked: boolean;
@@ -28,6 +30,11 @@ const navStyles = {
 };
 
 function Header({ darkModeChecked, checkDarkMode }: Props) {
+  const itemsToDeleteArray = useContext(ProductsToDeleteContext);
+
+  function displayItemsToDelete() {
+    console.log(itemsToDeleteArray);
+  }
   return (
     <AppBar position="fixed">
       <Toolbar
@@ -65,6 +72,7 @@ function Header({ darkModeChecked, checkDarkMode }: Props) {
               variant="contained"
               color="error"
               sx={{ color: "black", width: "140px" }}
+              onClick={displayItemsToDelete}
             >
               Mass Delete
             </Button>
