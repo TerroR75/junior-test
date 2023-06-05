@@ -55,7 +55,7 @@ class BaseController
     private function createProduct(Product $product)
     {
         $sql = "INSERT INTO products (sku, name, type, price) " .
-            "VALUES " . "('" . $product->sku . "', '" . $product->name . "', '" . $product->type . "', " . $product->price . ")";
+            "VALUES " . "('" . $product->getSKU() . "', '" . $product->getName() . "', '" . $product->getType() . "', " . $product->getPrice() . ")";
 
 
         if (mysqli_query($this->conn, $sql)) {

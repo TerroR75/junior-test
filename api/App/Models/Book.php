@@ -2,7 +2,7 @@
 
 class Book extends Product
 {
-    public $weight;
+    private $weight;
 
     public function __construct($sku, $name, $type, $price, $weight = 0)
     {
@@ -15,5 +15,23 @@ class Book extends Product
         $details = array();
         $details["weight"] = $row["weight"];
         $this->productData['details'] = $details;
+    }
+
+    /**
+     * @return int
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+    /**
+     * @param int $weight 
+     * @return self
+     */
+    public function setWeight($weight): self
+    {
+        $this->weight = $weight;
+        return $this;
     }
 }

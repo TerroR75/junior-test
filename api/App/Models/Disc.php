@@ -2,7 +2,7 @@
 
 class Disc extends Product
 {
-    public $size;
+    private $size;
 
     public function __construct($sku, $name, $type, $price, $size = 0)
     {
@@ -15,5 +15,23 @@ class Disc extends Product
         $details = array();
         $details["size"] = $row["size"];
         $this->productData['details'] = $details;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
+     * @param int $size 
+     * @return self
+     */
+    public function setSize($size): self
+    {
+        $this->size = $size;
+        return $this;
     }
 }

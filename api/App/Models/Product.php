@@ -2,10 +2,10 @@
 
 abstract class Product
 {
-    public $sku;
-    public $name;
-    public $type;
-    public $price;
+    private $sku;
+    private $name;
+    private $type;
+    private $price;
 
     protected $productData = [];
 
@@ -30,5 +30,76 @@ abstract class Product
     public function getData()
     {
         return $this->productData;
+    }
+    /**
+     * @return string
+     */
+    public function getSKU()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name 
+     * @return self
+     */
+    public function setSKU($name): self
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name 
+     * @return self
+     */
+    public function setName($name): self
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type 
+     * @return self
+     */
+    public function setType($type): self
+    {
+        $this->type = $type;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * @param int $price 
+     * @return self
+     */
+    public function setPrice($price): self
+    {
+        $this->price = $price;
+        return $this;
     }
 }

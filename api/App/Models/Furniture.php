@@ -2,7 +2,7 @@
 
 class Furniture extends Product
 {
-    public $dimensions;
+    private $dimensions;
 
     public function __construct($sku, $name, $type, $price, $dimensions = "")
     {
@@ -15,5 +15,23 @@ class Furniture extends Product
         $details = array();
         $details["dimensions"] = $row["dimensions"];
         $this->productData['details'] = $details;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDimensions()
+    {
+        return $this->dimensions;
+    }
+
+    /**
+     * @param string $dimensions 
+     * @return self
+     */
+    public function setDimensions($dimensions): self
+    {
+        $this->dimensions = $dimensions;
+        return $this;
     }
 }
