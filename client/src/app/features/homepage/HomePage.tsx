@@ -19,7 +19,7 @@ function HomePage() {
   }
 
   if (data.length === 0) {
-    return <h3>"No products found."</h3>;
+    return <h3>No products found.</h3>;
   }
 
   return <ProductList products={data} />;

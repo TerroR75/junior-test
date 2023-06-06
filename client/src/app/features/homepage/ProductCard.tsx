@@ -22,24 +22,22 @@ function ProductCard({ product }: Props) {
   const [markedDelete, setMarkedDelete] = useState(false);
   const itemsToDeleteContext = useContext(ProductsToDeleteContext);
 
-  function addItemToDeleteArray() {
-    const newArray = [...itemsToDeleteContext.productsToDelete, 50];
-
-    itemsToDeleteContext.setProductsToDelete(newArray);
-  }
-
-  function handleMarkForDeletion(e: any) {
+  function handleMarkForDeletion(
+    e: any,
+    dataset: { id: string; type: string }
+  ) {
     setMarkedDelete(!markedDelete);
+
     if (!markedDelete) {
-      itemsToDeleteContext.setProductsToDelete([
+      const newArray = [
         ...itemsToDeleteContext.productsToDelete,
-        parseInt(e.target.id),
-      ]);
-      console.log(e.target.id);
-      console.log(itemsToDeleteContext.productsToDelete);
+        { id: dataset.id, type: dataset.type },
+      ];
+
+      itemsToDeleteContext.setProductsToDelete(newArray);
     } else {
       const idToDelete = itemsToDeleteContext.productsToDelete.findIndex(
-        (id) => id === parseInt(e.target.id)
+        (item) => item.id === dataset.id
       );
       console.log(idToDelete);
       let newArray = [...itemsToDeleteContext.productsToDelete];
@@ -77,13 +75,14 @@ function ProductCard({ product }: Props) {
         </Button>
         <FormControlLabel
           control={
-            <Checkbox
-              className={"delete-checkbox"}
-              inputProps={{ id: product.id.toString() }}
-              checked={markedDelete}
-            />
+            <Checkbox className={"delete-checkbox"} checked={markedDelete} />
           }
-          onChange={handleMarkForDeletion}
+          onChange={(e) =>
+            handleMarkForDeletion(e, {
+              id: product.id.toString(),
+              type: product.type,
+            })
+          }
           label="Delete"
           sx={{ userSelect: "none" }}
         />

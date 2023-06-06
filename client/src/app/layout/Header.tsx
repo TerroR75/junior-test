@@ -1,7 +1,6 @@
 import {
   AppBar,
   Toolbar,
-  IconButton,
   Typography,
   Box,
   FormControlLabel,
@@ -13,6 +12,7 @@ import {
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { ProductsToDeleteContext } from "../context/ProductsToDeleteContext";
+import agent from "../api/axiosAgent";
 
 interface Props {
   darkModeChecked: boolean;
@@ -32,8 +32,18 @@ const navStyles = {
 function Header({ darkModeChecked, checkDarkMode }: Props) {
   const itemsToDeleteArray = useContext(ProductsToDeleteContext);
 
-  function displayItemsToDelete() {
-    console.log(itemsToDeleteArray);
+  function deleteItems() {
+    if (window.confirm("Are you sure?")) {
+      try {
+        agent.Products.deleteSelected({
+          data: itemsToDeleteArray.productsToDelete,
+        })
+          .then((response) => console.log(response))
+          .finally(() => window.location.reload());
+      } catch (error) {
+        console.log(error);
+      }
+    }
   }
   return (
     <AppBar position="fixed">
@@ -72,7 +82,7 @@ function Header({ darkModeChecked, checkDarkMode }: Props) {
               variant="contained"
               color="error"
               sx={{ color: "black", width: "140px" }}
-              onClick={displayItemsToDelete}
+              onClick={deleteItems}
             >
               Mass Delete
             </Button>

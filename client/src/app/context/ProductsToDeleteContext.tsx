@@ -1,9 +1,14 @@
 import { ReactNode, createContext, useState } from "react";
 
+export interface ProductInfo {
+  id: string;
+  type: string;
+}
+
 // Context for products ids to delete
 interface ProductsToDeleteContextProps {
-  productsToDelete: number[];
-  setProductsToDelete: React.Dispatch<React.SetStateAction<number[]>>;
+  productsToDelete: ProductInfo[];
+  setProductsToDelete: React.Dispatch<React.SetStateAction<ProductInfo[]>>;
 }
 
 interface ProductsToDeleteProviderProps {
@@ -19,7 +24,7 @@ export const ProductsToDeleteContext =
 export const ProductsToDeleteProvider: React.FC<
   ProductsToDeleteProviderProps
 > = ({ children }) => {
-  const [productsToDelete, setProductsToDelete] = useState<number[]>([]);
+  const [productsToDelete, setProductsToDelete] = useState<ProductInfo[]>([]);
 
   return (
     <ProductsToDeleteContext.Provider

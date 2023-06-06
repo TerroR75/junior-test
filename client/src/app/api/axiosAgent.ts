@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from "axios";
+import { ProductInfo } from "../context/ProductsToDeleteContext";
 
 axios.defaults.baseURL = "http://localhost/junior-test/api";
 
@@ -15,12 +16,13 @@ const requests = {
   get: (url: string) => axios.get(url).then(responseBody),
   post: (url: string, body: {}) => axios.post(url, body).then(responseBody),
   put: (url: string, body: {}) => axios.put(url, body).then(responseBody),
-  delete: (url: string) => axios.delete(url).then(responseBody),
+  delete: (url: string, body: {}) => axios.delete(url, body).then(responseBody),
 };
 
 const Products = {
   list: () => requests.get("products"),
-  deleteSelected: () => requests.delete("deleteSelected"),
+  deleteSelected: (productArray: any) =>
+    requests.delete("products/deleteAll", productArray),
 };
 
 const Books = {
