@@ -1,7 +1,7 @@
 Options +FollowSymLinks -MultiViews
 
 Header set Access-Control-Allow-Origin "http://localhost:3000"
-Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header set Access-Control-Allow-Methods "GET, POST, DELETE, OPTIONS"
 Header set Access-Control-Allow-Headers "Content-Type"
 
 

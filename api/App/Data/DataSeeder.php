@@ -57,7 +57,9 @@ class DataSeeder
         if (isset($data["discs"])) {
             foreach ($data["discs"] as $disc) {
                 $newDisc = new Disc($disc["id"], $disc["name"], $disc["type"], $disc["price"], $disc["size"]);
+                echo "Creating disc..." . json_encode($newDisc);
                 $discsController->createItems($newDisc);
+
             }
         }
 

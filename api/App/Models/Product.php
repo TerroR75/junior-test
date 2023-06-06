@@ -36,16 +36,16 @@ abstract class Product
      */
     public function getSKU()
     {
-        return $this->name;
+        return $this->sku;
     }
 
     /**
      * @param string $name 
      * @return self
      */
-    public function setSKU($name): self
+    public function setSKU($sku): self
     {
-        $this->name = $name;
+        $this->sku = $sku;
         return $this;
     }
 

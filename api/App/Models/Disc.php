@@ -13,7 +13,7 @@ class Disc extends Product
     public function addSpecificData($row)
     {
         $details = array();
-        $details["size"] = $row["size"];
+        $details["size"] = $row["details"];
         $this->productData['details'] = $details;
     }
 
