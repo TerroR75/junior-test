@@ -10,6 +10,22 @@ class DataSeeder
 
     public function seedData($jsonFilePath)
     {
+        $database = new Database();
+        $conn = $database->connect();
+        $sql = "SELECT COUNT(*) as count FROM products";
+        $result = mysqli_query($conn, $sql);
+
+        if ($result) {
+            $row = mysqli_fetch_assoc($result);
+            $rowCount = $row['count'];
+
+            if ($rowCount > 0) {
+                // Rows exist in the table
+                echo "There are $rowCount rows in the table already.";
+                exit;
+            }
+        }
+
         $this->seedDiscs($jsonFilePath);
         $this->seedBooks($jsonFilePath);
         $this->seedFurniture($jsonFilePath);

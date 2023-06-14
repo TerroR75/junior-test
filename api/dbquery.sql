@@ -30,3 +30,20 @@ CREATE TABLE IF NOT EXISTS furniture (
     dimensions VARCHAR(255) NOT NULL,
     FOREIGN KEY (product_id) REFERENCES products (id)
 );
+
+
+
+
+
+
+
+
+
+-- DELETE FROM book;
+-- DELETE FROM disc;
+-- DELETE FROM furniture;
+-- DELETE FROM products;
+-- ALTER TABLE book AUTO_INCREMENT = 1;
+-- ALTER TABLE disc AUTO_INCREMENT = 1;
+-- ALTER TABLE furniture AUTO_INCREMENT = 1;
+-- ALTER TABLE products AUTO_INCREMENT = 1;
