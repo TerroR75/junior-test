@@ -4,4 +4,5 @@ export default interface Product {
   name: string;
   type: string;
   price: number;
+  details: {}[];
 }

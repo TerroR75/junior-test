@@ -12,8 +12,9 @@ class Book extends Product
 
     public function addSpecificData($row)
     {
-        $details = array();
-        $details["weight"] = $row["details"];
+        $details = [];
+        $newRow["weight"] = $row["details"];
+        $details[] = $newRow;
         $this->productData['details'] = $details;
     }
 

@@ -12,8 +12,9 @@ class Furniture extends Product
 
     public function addSpecificData($row)
     {
-        $details = array();
-        $details["dimensions"] = $row["details"];
+        $details = [];
+        $newRow["dimensions"] = $row["details"];
+        $details[] = $newRow;
         $this->productData['details'] = $details;
     }
 

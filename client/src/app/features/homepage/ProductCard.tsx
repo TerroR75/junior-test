@@ -47,6 +47,31 @@ function ProductCard({ product }: Props) {
     }
   }
 
+  function generateDetailsString(product: Product) {
+    let string = "";
+
+    let obj = product.details[0];
+    for (let key in obj) {
+      let value = obj[key as keyof typeof obj];
+      string += key.charAt(0).toUpperCase() + key.slice(1) + ": ";
+      string += value;
+
+      switch (product.type) {
+        case "disc":
+          string += " MB";
+          break;
+        case "book":
+          string += " kg";
+          break;
+        case "furniture":
+          string += " (HxWxL)";
+          break;
+      }
+    }
+
+    return string;
+  }
+
   return (
     <Card sx={markedDelete ? { border: "1px dotted red" } : {}}>
       <CardHeader
@@ -68,11 +93,11 @@ function ProductCard({ product }: Props) {
         <Typography variant="body2" color="text.secondary">
           {product.type}
         </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {generateDetailsString(product)}
+        </Typography>
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Button component={Link} to={`/${product.id}`} size="small">
-          Details
-        </Button>
         <FormControlLabel
           control={
             <Checkbox className={"delete-checkbox"} checked={markedDelete} />
